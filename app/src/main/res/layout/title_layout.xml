@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+   android:layout_height="40dp"
+    android:background="@color/_81694f"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/RlNextBtn"
+            android:layout_width="100dp"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/title_left_btn"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/rw_spacing_size_10"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/fanhui"
+                android:clickable="true"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/RGB255_255_255"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title_right_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical|right"
+            android:textColor="@color/RGB255_255_255"
+            android:textSize="26sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/share_image"
+            android:layout_width="42dp"
+            android:layout_height="36dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:onClick="doClick"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

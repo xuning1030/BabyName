@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/layout_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtFooterTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上拉加载更多..."
+                android:textColor="#808080"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtRecordRefresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="无更新记录"
+                android:textColor="#BFBFBF"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/layout_Text" >
+
+            <ImageView
+                android:id="@+id/imgUpRefreshArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/indicator_arrow" />
+
+            <ProgressBar
+                android:id="@+id/pbUpRefreshRound"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

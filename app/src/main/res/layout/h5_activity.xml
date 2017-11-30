@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8e7e5">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title_layout" />
+
+
+    <ProgressBar
+        android:id="@+id/PBH5"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:max="100"
+        android:progress="0"
+        android:secondaryProgress="0" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/PBH5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <WebView
+                android:id="@+id/WVH5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/rw_spacing_size_15"
+                />
+
+            <include
+                layout="@layout/master_activity"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/h5_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/rw_spacing_size_30"
+        android:layout_marginRight="@dimen/rw_spacing_size_30"
+        android:background="@mipmap/set_money_back" />
+</RelativeLayout>

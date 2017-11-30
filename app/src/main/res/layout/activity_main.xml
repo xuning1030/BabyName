@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <FrameLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"></FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/containertabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="96dp"></FrameLayout>
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:visibility="gone"></TabWidget>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e8e7e5"></View>
+
+            <RadioGroup
+                android:id="@+id/tab_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/tab_zonghe_rbt"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableTop="@drawable/tab_home"
+                    android:gravity="center"
+                    android:text="综合选名"
+                    android:textColor="@drawable/tab_textcolor"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/tab_guwen_rbt"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@drawable/tab_order"
+                    android:gravity="center"
+                    android:text="古文选名"
+                    android:textColor="@drawable/tab_textcolor"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/tab_box_rbt"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@drawable/tab_order"
+                    android:gravity="center"
+                    android:text="古文选名"
+                    android:textColor="@drawable/tab_textcolor"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </RadioGroup>
+        </LinearLayout>
+    </FrameLayout>
+
+</TabHost>

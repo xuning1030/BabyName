@@ -1,0 +1,1299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8e7e5"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/home_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rw_spacing_size_60"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/_81694f"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/home_check1"
+                    android:layout_width="match_parent"
+                    android:layout_height="59dp"
+                    android:background="@android:color/transparent"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="宝宝取名"
+                    android:textColor="@drawable/home_top_tv"
+                    android:textSize="@dimen/rw_text_size_18" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/_ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/home_check2"
+                    android:layout_width="match_parent"
+                    android:layout_height="59dp"
+                    android:background="@android:color/transparent"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="订单查询"
+                    android:textColor="@drawable/home_top_tv"
+                    android:textSize="@dimen/rw_text_size_18" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/_81694f" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/home_btn_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rw_spacing_size_50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/_ffffff"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/home_bottom_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/rw_spacing_size_5"
+            android:layout_marginLeft="@dimen/rw_spacing_size_5"
+            android:layout_marginRight="@dimen/rw_spacing_size_5"
+            android:layout_marginTop="@dimen/rw_spacing_size_5"
+            android:background="@drawable/home_btn_back"
+            android:text="立即起名"
+            android:textColor="@color/_ffffff"
+            android:textSize="@dimen/rw_spacing_size_15" />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/home_scro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_line"
+        android:layout_marginBottom="@dimen/rw_spacing_size_50">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_170"
+                android:background="@mipmap/qm_banner" />
+
+            <ImageView
+                android:id="@+id/home_banner2_Img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_120"
+                android:background="@mipmap/qm_banner2"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/home_banner2_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_120"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/rw_spacing_size_120"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/rw_spacing_size_46"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/rw_spacing_size_261"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/home_back_edt"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/home_order_edt1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/rw_text_size_10"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:hint="请输入单号"
+                                android:numeric="integer"
+                                android:singleLine="true"
+                                android:textColor="@color/_333333"
+                                android:textColorHint="@color/_bfbfbf"
+                                android:textSize="@dimen/rw_text_size_15" />
+                        </LinearLayout>
+
+
+                        <Button
+                            android:id="@+id/home_order_bt1"
+                            android:layout_width="@dimen/rw_spacing_size_75"
+                            android:layout_height="match_parent"
+                            android:background="@color/_b7a99a"
+                            android:gravity="center"
+                            android:text="查询订单"
+                            android:textColor="@color/_ffffff"
+                            android:textSize="@dimen/rw_text_size_15" />
+                    </TableRow>
+
+                    <TextView
+                        android:id="@+id/home_order_tv1"
+                        android:layout_width="@dimen/rw_spacing_size_336"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/rw_spacing_size_15"
+                        android:text="温馨提示：未付款订单只能通过订单号查询,如果订单号忘记，您可以点此查看您的历史订单。"
+                        android:textSize="@dimen/rw_text_size_15" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/right_01" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="16dp"
+                    android:text="取名必填信息"
+                    android:textColor="@color/_333333"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/left_01" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_40"
+                android:layout_marginLeft="@dimen/rw_spacing_size_24"
+                android:layout_marginRight="@dimen/rw_spacing_size_24"
+                android:layout_marginTop="@dimen/rw_spacing_size_10"
+                android:background="@drawable/home_back_edt"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_10"
+                    android:background="@mipmap/name_back"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_10"
+                    android:gravity="center"
+                    android:text="姓氏："
+
+                    android:textColor="@color/_333333"
+                    android:textSize="@dimen/rw_spacing_size_15" />
+
+                <babyname.babyname.widget.LimitEditText
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入您的姓氏(只限中文)"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:textColor="@color/_333333"
+                    android:textColorHint="@color/_bfbfbf"
+                    android:textSize="@dimen/rw_spacing_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_40"
+                android:layout_marginLeft="@dimen/rw_spacing_size_24"
+                android:layout_marginRight="@dimen/rw_spacing_size_24"
+                android:layout_marginTop="@dimen/rw_spacing_size_10"
+                android:background="@drawable/home_back_edt"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_10"
+                    android:background="@mipmap/home_sex_back"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_10"
+                    android:gravity="center"
+                    android:text="性别："
+                    android:textColor="@color/_333333"
+                    android:textSize="@dimen/rw_spacing_size_15" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <CheckBox
+                        android:id="@+id/home_check_nan"
+                        style="@style/MyCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/rw_text_size_30"
+                        android:checked="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/rw_text_size_15"
+                        android:text="男"
+                        android:textColor="@color/_333333"
+                        android:textSize="@dimen/rw_text_size_15" />
+
+                    <CheckBox
+                        android:id="@+id/home_check_nv"
+                        style="@style/MyCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/rw_text_size_30" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/rw_text_size_15"
+                        android:text="女"
+                        android:textColor="@color/_333333"
+                        android:textSize="@dimen/rw_text_size_15" />
+
+                </TableRow>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_40"
+                android:layout_marginLeft="@dimen/rw_spacing_size_24"
+                android:layout_marginRight="@dimen/rw_spacing_size_24"
+                android:layout_marginTop="@dimen/rw_spacing_size_10"
+                android:background="@drawable/home_back_edt"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_10"
+                    android:background="@mipmap/home_danshuang_back"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_10"
+                    android:gravity="center"
+                    android:text="单双："
+                    android:textColor="@color/_333333"
+                    android:textSize="@dimen/rw_spacing_size_15" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <CheckBox
+                        android:id="@+id/home_dan_ck"
+                        style="@style/MyCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/rw_text_size_30"
+                        android:checked="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/rw_text_size_15"
+                        android:text="单字"
+                        android:textColor="@color/_333333"
+                        android:textSize="@dimen/rw_text_size_15" />
+
+                    <CheckBox
+                        android:id="@+id/home_shuang_ck"
+                        style="@style/MyCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/rw_text_size_30" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/rw_text_size_15"
+                        android:text="双字"
+                        android:textColor="@color/_333333"
+                        android:textSize="@dimen/rw_text_size_15" />
+
+                </TableRow>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/home_born_data_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_40"
+                android:layout_marginLeft="@dimen/rw_spacing_size_24"
+                android:layout_marginRight="@dimen/rw_spacing_size_24"
+                android:layout_marginTop="@dimen/rw_spacing_size_10"
+                android:background="@drawable/home_back_edt"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_10"
+                    android:background="@mipmap/home_born_data"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_10"
+                    android:gravity="center"
+                    android:text="出生日期："
+                    android:textColor="@color/_333333"
+                    android:textSize="@dimen/rw_spacing_size_15" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/rw_text_size_15"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/home_born_data_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="13"
+                        android:gravity="center_vertical"
+                        android:hint="1991-09-01"
+                        android:textColor="@color/_333333"
+                        android:textColorHint="@color/_bfbfbf"
+                        android:textSize="@dimen/rw_text_size_14" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/rw_spacing_size_25"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/home_return_back" />
+                    </LinearLayout>
+                </TableRow>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/home_born_hour_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_40"
+                android:layout_marginLeft="@dimen/rw_spacing_size_24"
+                android:layout_marginRight="@dimen/rw_spacing_size_24"
+                android:layout_marginTop="@dimen/rw_spacing_size_10"
+                android:background="@drawable/home_back_edt"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_10"
+                    android:background="@mipmap/home_born_hour"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_10"
+                    android:gravity="center"
+                    android:text="出生时辰："
+                    android:textColor="@color/_333333"
+                    android:textSize="@dimen/rw_spacing_size_15" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/rw_text_size_15"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/home_born_hour_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/rw_text_size_15"
+                        android:layout_weight="13"
+                        android:gravity="center_vertical"
+                        android:hint="18:40"
+                        android:textColor="@color/_333333"
+                        android:textColorHint="@color/_bfbfbf"
+                        android:textSize="@dimen/rw_text_size_14" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/rw_spacing_size_25"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/home_return_back" />
+                    </LinearLayout>
+                </TableRow>
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_40"
+                android:layout_marginLeft="@dimen/rw_spacing_size_24"
+                android:layout_marginRight="@dimen/rw_spacing_size_24"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/home_dingzi_ck"
+                    style="@style/HomeCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_10"
+                    android:gravity="center"
+                    android:text="固定名字中的字"
+                    android:textColor="@color/_333333"
+                    android:textSize="@dimen/rw_spacing_size_15" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_40"
+                android:layout_marginLeft="@dimen/rw_spacing_size_24"
+                android:layout_marginRight="@dimen/rw_spacing_size_24"
+                android:layout_marginTop="@dimen/rw_spacing_size_10"
+                android:background="@drawable/home_back_edt"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_10"
+                    android:background="@mipmap/home_zi_back"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_10"
+                    android:gravity="center"
+                    android:text="名字："
+                    android:textColor="@color/_333333"
+                    android:textSize="@dimen/rw_spacing_size_15" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/rw_text_size_15"
+                    android:gravity="center_vertical">
+
+                    <babyname.babyname.widget.LimitEditText
+                        android:id="@+id/home_xuanzi_edt"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/rw_text_size_15"
+                        android:layout_weight="13"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:maxLength="6"
+                        android:hint="请输入需要的字"
+                        android:background="@null"
+                        android:textColor="@color/_333333"
+                        android:textColorHint="@color/_bfbfbf"
+                        android:textSize="@dimen/rw_text_size_14" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/rw_spacing_size_35"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <Button
+                            android:layout_width="@dimen/rw_spacing_size_55"
+                            android:layout_height="@dimen/rw_spacing_size_25"
+                            android:background="@drawable/home_btn_back"
+                            android:text="第一字"
+                            android:textColor="@color/_ffffff"
+                            android:textSize="@dimen/rw_spacing_size_15" />
+                    </LinearLayout>
+                </TableRow>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_50"
+                android:layout_marginTop="@dimen/rw_spacing_size_15"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/home_btn_quming"
+                    android:layout_width="@dimen/rw_spacing_size_190"
+                    android:layout_height="@dimen/rw_spacing_size_40"
+                    android:background="@drawable/home_btn_back"
+                    android:text="立即起名"
+                    android:textColor="@color/_ffffff"
+                    android:textSize="@dimen/rw_spacing_size_15" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/rw_spacing_size_8"
+                android:layout_marginRight="@dimen/rw_spacing_size_8"
+                android:layout_marginTop="@dimen/rw_spacing_size_10"
+                android:gravity="center|left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/home_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/haha"
+                    android:gravity="center_vertical"
+                    android:padding="20dp"
+                    android:textColor="@color/_333333" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/rw_spacing_size_15"
+                android:background="@mipmap/home_detail1"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/rw_text_size_15"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginRight="@dimen/rw_spacing_size_12"
+                android:layout_marginTop="@dimen/rw_spacing_size_15"
+                android:background="@mipmap/home_detail2" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/_c7beb5"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/right_01" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="16dp"
+                    android:text="客户评价"
+                    android:textColor="@color/_333333"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/left_01" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginRight="@dimen/rw_spacing_size_12"
+                android:layout_marginTop="@dimen/rw_spacing_size_16"
+                android:text="订单号为：2017***20975"
+                android:textColor="@color/_81694f"
+                android:textSize="@dimen/rw_spacing_size_15" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginRight="@dimen/rw_spacing_size_12"
+                android:layout_marginTop="@dimen/rw_spacing_size_5"
+                android:text="宝宝取名的名字大气时尚，寓意很好，非常喜欢小名叫起来朗朗上口，现在小孩还太小，但是一家人都是拿着小名在逗他，好像宝宝已经会听懂话似的，这种感觉真的非常好；客服也非常敬业，非常有耐心，非常非常感谢你们！"
+                android:textColor="@color/_333333"
+                android:textSize="@dimen/rw_spacing_size_15" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_1"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginTop="@dimen/rw_spacing_size_16"
+                android:background="@color/_c7beb5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginRight="@dimen/rw_spacing_size_12"
+                android:layout_marginTop="@dimen/rw_spacing_size_16"
+                android:text="订单号为：2017***28295"
+                android:textColor="@color/_81694f"
+                android:textSize="@dimen/rw_spacing_size_15" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginRight="@dimen/rw_spacing_size_12"
+                android:layout_marginTop="@dimen/rw_spacing_size_5"
+                android:text="必须好评，服务很到位，开始我自己搞错日期了，回复邮件以后帮我改过来了！谢谢，值得信赖。"
+                android:textColor="@color/_333333"
+                android:textSize="@dimen/rw_spacing_size_15" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_1"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginTop="@dimen/rw_spacing_size_16"
+                android:background="@color/_c7beb5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginRight="@dimen/rw_spacing_size_12"
+                android:layout_marginTop="@dimen/rw_spacing_size_16"
+                android:text="订单号为：2017***90294"
+                android:textColor="@color/_81694f"
+                android:textSize="@dimen/rw_spacing_size_15" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginRight="@dimen/rw_spacing_size_12"
+                android:layout_marginTop="@dimen/rw_spacing_size_5"
+                android:text="我加微信购买的人工亲算起名，名字确实好听，也有很有寓意，老师非常专业！写这么多不只是想夸夸这个app，只是给有起名苦恼的人一些参考，自己起名确实费劲脑汁也不一定悟得好名字，还是专业的人做专业的事，五星好评！"
+                android:textColor="@color/_333333"
+                android:textSize="@dimen/rw_spacing_size_15" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_1"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginTop="@dimen/rw_spacing_size_16"
+                android:background="@color/_c7beb5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginRight="@dimen/rw_spacing_size_12"
+                android:layout_marginTop="@dimen/rw_spacing_size_16"
+                android:text="订单号为：2017***88523"
+                android:textColor="@color/_81694f"
+                android:textSize="@dimen/rw_spacing_size_15" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginRight="@dimen/rw_spacing_size_12"
+                android:layout_marginTop="@dimen/rw_spacing_size_5"
+                android:text="名字评分都很高，原来好名字是那么多的，先前还想半天！"
+                android:textColor="@color/_333333"
+                android:textSize="@dimen/rw_spacing_size_15" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_1"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginTop="@dimen/rw_spacing_size_16"
+                android:background="@color/_c7beb5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginRight="@dimen/rw_spacing_size_12"
+                android:layout_marginTop="@dimen/rw_spacing_size_16"
+                android:text="订单号为：2017***22335"
+                android:textColor="@color/_81694f"
+                android:textSize="@dimen/rw_spacing_size_15" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginRight="@dimen/rw_spacing_size_12"
+                android:layout_marginTop="@dimen/rw_spacing_size_5"
+                android:text="这是我第二次来这里取名了，儿子的名字是宝宝取名起的，这次女儿因为名字不太好，所以加大师微信购买了人工起名，目前已经选好要用的名字了，非常感谢老师不厌其烦的解答，老师人真的非常好，很有耐心。"
+                android:textColor="@color/_333333"
+                android:textSize="@dimen/rw_spacing_size_15" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_1"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginTop="@dimen/rw_spacing_size_16"
+                android:background="@color/_c7beb5" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_120"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/rw_spacing_size_46"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/rw_spacing_size_261"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/home_back_edt"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/home_order_edt2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/rw_text_size_10"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint="请输入单号"
+                            android:numeric="integer"
+                            android:singleLine="true"
+                            android:textColor="@color/_333333"
+                            android:textColorHint="@color/_bfbfbf"
+                            android:textSize="@dimen/rw_text_size_15" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/home_order_bt2"
+                        android:layout_width="@dimen/rw_spacing_size_75"
+                        android:layout_height="match_parent"
+                        android:background="@color/_b7a99a"
+                        android:gravity="center"
+                        android:text="查询订单"
+                        android:textColor="@color/_ffffff"
+                        android:textSize="@dimen/rw_text_size_15" />
+                </TableRow>
+
+                <TextView
+                    android:id="@+id/home_order_tv2"
+                    android:layout_width="@dimen/rw_spacing_size_336"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/rw_spacing_size_15"
+                    android:text="温馨提示：未付款订单只能通过订单号查询,如果订单号忘记，您可以点此查看您的历史订单。"
+                    android:textSize="@dimen/rw_text_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/_c7beb5"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/right_01" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="16dp"
+                    android:text="最新订单"
+                    android:textColor="@color/_333333"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/left_01" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/rw_spacing_size_190"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/lv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:stackFromBottom="true"
+                    android:transcriptMode="alwaysScroll" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/_c7beb5"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/right_01" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="16dp"
+                    android:text="常见问题"
+                    android:textColor="@color/_333333"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/left_01" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/home_question1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_40"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginRight="@dimen/rw_spacing_size_12"
+                android:gravity="center_vertical"
+                android:text="名字真的那么重要吗？"
+                android:textColor="@color/_333333"
+                android:textSize="@dimen/rw_spacing_size_15" />
+
+
+            <LinearLayout
+                android:id="@+id/home_line_question1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/_ffffff"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/home_question_answer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/rw_text_size_12"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                    android:layout_marginRight="@dimen/rw_spacing_size_12"
+                    android:layout_marginTop="@dimen/rw_text_size_12"
+                    android:text="答：古人曰“赐子千金，不如赐子一艺，赐子一艺，不如赐子好名”。“名不正则言不顺”，人生命运，个人命理固然重要，但好的名字有提升运势、运气弥补个人命里不足的作用。但是，不同的人生时期，对名字的也有不同的要求；不同的工作事业，名字所起的作用也有轻重之分。好名字提升人生运程，不好的名字会对人生、事业、爱情、婚姻、财运等造成不利的影响。"
+                    android:textColor="@color/_808080"
+                    android:textSize="@dimen/rw_spacing_size_15" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_1"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:background="@color/_c7beb5" />
+
+            <TextView
+                android:id="@+id/home_question2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_40"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginRight="@dimen/rw_spacing_size_12"
+                android:gravity="center_vertical"
+                android:text="付款后多久可以得到起名结果？"
+                android:textColor="@color/_333333"
+                android:textSize="@dimen/rw_spacing_size_15" />
+
+
+            <LinearLayout
+                android:id="@+id/home_line_question2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/_ffffff"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/home_question_answer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/rw_text_size_12"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                    android:layout_marginRight="@dimen/rw_spacing_size_12"
+                    android:layout_marginTop="@dimen/rw_text_size_12"
+                    android:text="答：一般10分钟左右就可以收到，最迟不超过１小时，超时未收到可以联系在线客服。"
+                    android:textColor="@color/_808080"
+                    android:textSize="@dimen/rw_spacing_size_15" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_1"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:background="@color/_c7beb5" />
+
+            <TextView
+                android:id="@+id/home_question3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_40"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginRight="@dimen/rw_spacing_size_12"
+                android:gravity="center_vertical"
+                android:text="我去哪里查起名结果？"
+                android:textColor="@color/_333333"
+                android:textSize="@dimen/rw_spacing_size_15" />
+
+
+            <LinearLayout
+                android:id="@+id/home_line_question3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/_ffffff"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/home_question_answer3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/rw_text_size_12"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                    android:layout_marginRight="@dimen/rw_spacing_size_12"
+                    android:layout_marginTop="@dimen/rw_text_size_12"
+                    android:text="答：起名结果将发送到您的邮箱中，如果没有邮箱，请联系在线客服！"
+                    android:textColor="@color/_808080"
+                    android:textSize="@dimen/rw_spacing_size_15" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_1"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:background="@color/_c7beb5" />
+
+            <TextView
+                android:id="@+id/home_question4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_40"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginRight="@dimen/rw_spacing_size_12"
+                android:gravity="center_vertical"
+                android:text="宝宝八字的五行，是缺什么就补什么吗？"
+                android:textColor="@color/_333333"
+                android:textSize="@dimen/rw_spacing_size_15"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:id="@+id/home_line_question4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/_ffffff"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/home_question_answer4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/rw_text_size_12"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                    android:layout_marginRight="@dimen/rw_spacing_size_12"
+                    android:layout_marginTop="@dimen/rw_text_size_12"
+                    android:text="答：不是。需要区别对待，精确分析，真正做到“需要什么，则补什么”。否则就是简单加减，补救容易失误。"
+                    android:textColor="@color/_808080"
+                    android:textSize="@dimen/rw_spacing_size_15" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_1"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:background="@color/_c7beb5" />
+
+            <TextView
+                android:id="@+id/home_question5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_40"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginRight="@dimen/rw_spacing_size_12"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:text="名字的笔画五格评分越高越好吗？"
+                android:textColor="@color/_333333"
+                android:textSize="@dimen/rw_spacing_size_15" />
+
+
+            <LinearLayout
+                android:id="@+id/home_line_question5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/_ffffff"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/home_question_answer5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/rw_text_size_12"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                    android:layout_marginRight="@dimen/rw_spacing_size_12"
+                    android:layout_marginTop="@dimen/rw_text_size_12"
+                    android:text="答：不对。好名字首要考虑八字五行是否助运、音形义好不好，然后再参考笔画五格评分。"
+                    android:textColor="@color/_808080"
+                    android:textSize="@dimen/rw_spacing_size_15" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_1"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:visibility="gone"
+                android:background="@color/_c7beb5" />
+
+            <TextView
+                android:id="@+id/home_question6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_40"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginRight="@dimen/rw_spacing_size_12"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:text="女性可以使用带有“孤寡运”数理暗示的名字吗？"
+                android:textColor="@color/_333333"
+                android:textSize="@dimen/rw_spacing_size_15" />
+
+            <LinearLayout
+                android:id="@+id/home_line_question6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/_ffffff"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/home_question_answer6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/rw_text_size_12"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                    android:layout_marginRight="@dimen/rw_spacing_size_12"
+                    android:layout_marginTop="@dimen/rw_text_size_12"
+                    android:text="答：如果八字里面带有孤寡信息，应避免使用带有“孤寡运”数理暗示的名字。如果八字没有孤寡信息，则可以放心使用。"
+                    android:textColor="@color/_808080"
+                    android:textSize="@dimen/rw_spacing_size_15" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_1"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:visibility="gone"
+                android:background="@color/_c7beb5" />
+
+
+            <TextView
+                android:id="@+id/home_question7"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_40"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginRight="@dimen/rw_spacing_size_12"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:text="取了好名字是否就意味着高枕无忧了？"
+                android:textColor="@color/_333333"
+                android:textSize="@dimen/rw_spacing_size_15" />
+
+            <LinearLayout
+                android:id="@+id/home_line_question7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/_ffffff"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/home_question_answer7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/rw_text_size_12"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                    android:layout_marginRight="@dimen/rw_spacing_size_12"
+                    android:layout_marginTop="@dimen/rw_text_size_12"
+                    android:text="答：好名+好命=锦上添花；好名+坏命=雪中送炭；坏名+好命=有心无力；坏名+坏命=落井下石。名字的作用力不容忽视，也不能过分依赖。"
+                    android:textColor="@color/_808080"
+                    android:textSize="@dimen/rw_spacing_size_15" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_1"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:background="@color/_c7beb5" />
+
+            <TextView
+                android:id="@+id/home_question8"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_40"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:layout_marginRight="@dimen/rw_spacing_size_12"
+                android:gravity="center_vertical"
+                android:text="名字不满意怎么办？"
+                android:textColor="@color/_333333"
+                android:textSize="@dimen/rw_spacing_size_15" />
+
+            <LinearLayout
+                android:id="@+id/home_line_question8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/_ffffff"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/home_question_answer8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/rw_text_size_12"
+                    android:layout_marginLeft="@dimen/rw_spacing_size_12"
+
+                    android:layout_marginRight="@dimen/rw_spacing_size_12"
+                    android:layout_marginTop="@dimen/rw_text_size_12"
+                    android:text="答：极速宝宝取名的不满意率只有千分之二，原因大多是因为操作不熟练、需求不明确、追求满分造成的。 如果您有疑问请及时联系客服，我们一定能完美解决您所提出的问题，争取满意百分百。"
+                    android:textColor="@color/_808080"
+                    android:textSize="@dimen/rw_spacing_size_15" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rw_spacing_size_1"
+                android:layout_marginBottom="@dimen/rw_spacing_size_15"
+                android:layout_marginLeft="@dimen/rw_spacing_size_12"
+                android:background="@color/_c7beb5" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/home_qq_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/rw_spacing_size_120"
+        android:layout_marginRight="@dimen/rw_spacing_size_30"
+        android:background="@mipmap/qq_phone" />
+
+    <ImageView
+        android:id="@+id/home_call_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/rw_spacing_size_60"
+        android:layout_marginRight="@dimen/rw_spacing_size_30"
+        android:background="@mipmap/call_phone" />
+
+
+</RelativeLayout>

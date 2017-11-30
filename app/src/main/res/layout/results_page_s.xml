@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<include
+    layout="@layout/title_layout"/>
+<ScrollView
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/results_page_tou"
+            />
+        <include layout="@layout/results_page_shen"/>
+        <include layout="@layout/results_page_wei_shang"/>
+        <include layout="@layout/results_page_wei_xia"/>
+
+    </LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>
